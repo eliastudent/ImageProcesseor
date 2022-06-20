@@ -2,15 +2,16 @@ import javax.swing.*;
 import java.awt.*;
     public class Window extends JFrame{
 
+
         public static void main(String[] args) {
             Window main = new Window();
         }
-
-        public static final int WINDOW_WHIDTH = 800;
+        public static final int WINDOW_WHIDTH = 1000;
         public static final int WINDOW_HIGHET = 600;
         public static final int DEFAULT_COMPONENT_HIGHET = 90;
         public static final int DEFAULT_SPACE = 20;
-        private JFrame frame;
+        public static final int SIZE_OF_IMAGE_FACEBOOK = 309;
+
         public Window() {
             this.setSize(WINDOW_WHIDTH, WINDOW_HIGHET);
             this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -20,10 +21,9 @@ import java.awt.*;
             this.setTitle("POTOSHOP");
 
             JLabel title = new JLabel("POTOSHOP");
-            title.setBounds(WINDOW_HIGHET / 2 + DEFAULT_COMPONENT_HIGHET / 3, 0, WINDOW_WHIDTH / 2, DEFAULT_COMPONENT_HIGHET);
+            title.setBounds(WINDOW_WHIDTH/2-DEFAULT_COMPONENT_HIGHET+DEFAULT_SPACE, 0, WINDOW_WHIDTH / 2, DEFAULT_COMPONENT_HIGHET);
             title.setFont(new Font("serif", Font.BOLD, 25));
             this.add(title);
-
 
             JTextField text = new JTextField();
             text.setBounds(title.getWidth() - title.getWidth() / 4, title.getY() + title.getHeight(), (title.getWidth() / 3) - 12,
@@ -81,18 +81,25 @@ import java.awt.*;
             });
 
             JLabel before = new JLabel("BEFORE");
-            before.setBounds(DEFAULT_COMPONENT_HIGHET, text.getY() + text.getHeight(), WINDOW_HIGHET / 4, DEFAULT_SPACE);
+            before.setBounds(DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/3, text.getY() + text.getHeight(), WINDOW_HIGHET / 4, DEFAULT_SPACE);
             before.setFont(new Font("serif", Font.BOLD, 25));
             this.add(before);
 
             JLabel after = new JLabel("AFTER");
-            after.setBounds(WINDOW_HIGHET, text.getY() + text.getHeight(), WINDOW_HIGHET / 4, DEFAULT_SPACE);
+            after.setBounds(WINDOW_HIGHET+DEFAULT_COMPONENT_HIGHET*2, text.getY() + text.getHeight(), WINDOW_HIGHET / 4, DEFAULT_SPACE);
             after.setFont(new Font("serif", Font.BOLD, 25));
             this.add(after);
 
+            JButton imageBefore = new JButton("imageBefore");
+            imageBefore.setBounds(DEFAULT_SPACE, before.getY() + before.getHeight() + DEFAULT_SPACE, SIZE_OF_IMAGE_FACEBOOK, SIZE_OF_IMAGE_FACEBOOK);
+            imageBefore.setFont(new Font("serif", Font.PLAIN, 25));
+            this.add(imageBefore);
 
-
-
+            JButton imageAfter = new JButton("imageAfter");
+            imageAfter.setBounds(WINDOW_HIGHET+DEFAULT_COMPONENT_HIGHET-DEFAULT_SPACE, before.getY() + before.getHeight() + DEFAULT_SPACE, SIZE_OF_IMAGE_FACEBOOK, SIZE_OF_IMAGE_FACEBOOK);
+            imageAfter.setFont(new Font("serif", Font.PLAIN, 25));
+            this.add(imageAfter);
 
         }
+
     }
