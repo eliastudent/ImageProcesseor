@@ -1,3 +1,6 @@
+import org.w3c.dom.ls.LSOutput;
+
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
     public class Window extends JFrame{
@@ -121,6 +124,7 @@ import java.awt.*;
 
             JButton imageBefore = new JButton("imageBefore");
             imageBefore.setBounds(DEFAULT_SPACE, before.getY() + before.getHeight() + DEFAULT_SPACE, SIZE_OF_IMAGE_FACEBOOK, SIZE_OF_IMAGE_FACEBOOK);
+            System.out.println(before.getY() + before.getHeight() + DEFAULT_SPACE);
             imageBefore.setFont(new Font("serif", Font.PLAIN, 25));
             this.add(imageBefore);
 
