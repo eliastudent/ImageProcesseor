@@ -43,7 +43,7 @@ import java.awt.*;
             this.add(myButton1);
             myButton1.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(1);
+                    Filters filters=new Filters(0);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -54,7 +54,7 @@ import java.awt.*;
             this.add(myButton2);
             myButton2.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(2);
+                    Filters filters=new Filters(1);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -66,7 +66,7 @@ import java.awt.*;
             this.add(myButton3);
             myButton3.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(3);
+                    Filters filters=new Filters(2);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -78,7 +78,7 @@ import java.awt.*;
             this.add(myButton4);
             myButton4.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(4);
+                    Filters filters=new Filters(3);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -90,7 +90,7 @@ import java.awt.*;
             this.add(myButton5);
             myButton5.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(5);
+                    Filters filters=new Filters(4);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }
@@ -102,7 +102,7 @@ import java.awt.*;
             this.add(myButton6);
             myButton6.addActionListener((event) -> {
                 try {
-                    Filters filters=new Filters(6);
+                    Filters filters=new Filters(5);
                 } catch (Exception e) {
                     throw new RuntimeException(e);
                 }

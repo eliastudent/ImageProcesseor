@@ -6,7 +6,7 @@ import java.io.File;
 import java.util.Random;
 
 
-public class Filters extends Window {
+public class Filters {
         public Filters(int temp)throws Exception {
             Random random=new Random();
             int temp0=random.nextInt();
@@ -18,7 +18,7 @@ public class Filters extends Window {
                     for (int y = 0; y < image.getHeight(); y++) {
                         int pixel = image.getRGB(x, y);
                         Color color = new Color(pixel);
-                        if(temp<=4) {
+                        if(temp<5) {
                             color = switch (temp) {
                                 case 0 -> BlackAndWhite(color);
                                 case 1 -> EliminateRedOrGreenOrBlue(color, temp0);
