@@ -3,7 +3,7 @@ import java.awt.*;
     public class Window extends JFrame{
 
 
-        public static void main(String[] args) {
+        public static void main(String[] args)throws Exception {
             Window main = new Window();
         }
         public static final int WINDOW_WHIDTH = 1000;
@@ -38,45 +38,74 @@ import java.awt.*;
                 //FUNCTION
             });
 
-            JButton myButton1 = new JButton("temp1");
+            JButton myButton1 = new JButton("BlackAndWhite");
             myButton1.setBounds(text.getX(), text.getY() + text.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton1);
             myButton1.addActionListener((event) -> {
-                //FUNCTION
+                try {
+                    Filters filters=new Filters(1);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
             });
 
-            JButton myButton2 = new JButton("temp2");
+            JButton myButton2 = new JButton("EliminateRedOrGreenOrBlue");
             myButton2.setBounds(myButton1.getX(), myButton1.getY() + myButton1.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton2);
             myButton2.addActionListener((event) -> {
+                try {
+                    Filters filters=new Filters(2);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
                 //FUNCTION
             });
 
-            JButton myButton3 = new JButton("temp3");
+            JButton myButton3 = new JButton("Lighter");
             myButton3.setBounds(myButton2.getX(), myButton2.getY() + myButton2.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton3);
             myButton3.addActionListener((event) -> {
+                try {
+                    Filters filters=new Filters(3);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
                 //FUNCTION
             });
 
-            JButton myButton4 = new JButton("temp4");
+            JButton myButton4 = new JButton("Darker");
             myButton4.setBounds(myButton3.getX(), myButton3.getY() + myButton3.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton4);
             myButton4.addActionListener((event) -> {
+                try {
+                    Filters filters=new Filters(4);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
                 //FUNCTION
             });
 
-            JButton myButton5 = new JButton("temp5");
+            JButton myButton5 = new JButton("Contrast");
             myButton5.setBounds(myButton4.getX(), myButton4.getY() + myButton4.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton5);
             myButton5.addActionListener((event) -> {
+                try {
+                    Filters filters=new Filters(5);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
                 //FUNCTION
             });
 
-            JButton myButton6 = new JButton("temp6");
+            JButton myButton6 = new JButton("Mirror");
             myButton6.setBounds(myButton5.getX(), myButton5.getY() + myButton5.getHeight() + DEFAULT_SPACE, title.getWidth() / 2, title.getHeight() / 2);
             this.add(myButton6);
             myButton6.addActionListener((event) -> {
+                try {
+                    Filters filters=new Filters(6);
+                } catch (Exception e) {
+                    throw new RuntimeException(e);
+                }
                 //FUNCTION
             });
 

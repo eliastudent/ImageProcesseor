@@ -1,16 +1,15 @@
 import javax.imageio.ImageIO;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
 
 
-    public class Main {
-        public static void main(String[] args) throws Exception {
-            Random random = new Random();
-            int temp=random.nextInt(0,4);
-            int temp0 = random.nextInt(0,2);
-            int temp1=random.nextInt(0,1);
+public class Filters extends Window {
+        public Filters(int temp)throws Exception {
+            Random random=new Random();
+            int temp0=random.nextInt();
             File file = new File("C:\\images\\chile2(1).jpg");
             if (file.exists()) {
                 BufferedImage image = ImageIO.read(file);
@@ -19,19 +18,17 @@ import java.util.Random;
                     for (int y = 0; y < image.getHeight(); y++) {
                         int pixel = image.getRGB(x, y);
                         Color color = new Color(pixel);
-                        if(temp1==0) {
+                        if(temp<=4) {
                             color = switch (temp) {
                                 case 0 -> BlackAndWhite(color);
                                 case 1 -> EliminateRedOrGreenOrBlue(color, temp0);
                                 case 2 -> Lighter(color);
                                 case 3 -> Darker(color);
                                 default -> Contrast(color);
-
                             };
-
                             outputeImage.setRGB(x, y, color.getRGB());
                         }
-                        if(temp1==1){//Mirror
+                        if(temp==5){//Mirror
                             outputeImage.setRGB(image.getWidth() - x - 1, y, color.getRGB());
                         }
                     }
