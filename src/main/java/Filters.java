@@ -4,16 +4,20 @@ import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.Random;
+import java.net.URL;
 
 
 public class Filters {
         public Filters(int temp)throws Exception {
             Random random=new Random();
             int temp0=random.nextInt();
-            File file = new File("C:\\Users\\eeeee\\Downloads\\celenum\\jet.jpg");
-            if (file.exists()) {
-                BufferedImage image = ImageIO.read(file);
-                BufferedImage outputeImage = ImageIO.read(file);
+            URL url = new URL("https://scontent.ftlv18-1.fna.fbcdn.net/v/t39.30808-6/211719664_104441521904401_6701039342400064148_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SUcCFTsOikYAX9gGjcM&_nc_ht=scontent.ftlv18-1.fna&oh=00_AT-6FJyjwAswQKKifB5qLl0ii3LPgHfrPALsszSGpDENOA&oe=62B76F2D");
+            BufferedImage image = ImageIO.read(url);
+            BufferedImage outputeImage = ImageIO.read(url);
+            // File file = new File("C:\\Users\\eeeee\\Downloads\\celenum\\jet.jpg");
+//            if (file.exists()) {
+//                BufferedImage image = ImageIO.read(file);
+//                BufferedImage outputeImage = ImageIO.read(file);
                 for (int x = 0; x < image.getWidth(); x++) {
                     for (int y = 0; y < image.getHeight(); y++) {
                         int pixel = image.getRGB(x, y);
@@ -36,7 +40,7 @@ public class Filters {
                 File output = new File("C:\\Users\\eeeee\\Downloads\\celenum\\6.jpg");
                 ImageIO.write(outputeImage, "jpg", output);
             }
-        }
+
         public static Color Contrast(Color color)  {
             int red = color.getRed();
             int green = color.getGreen();
