@@ -10,7 +10,8 @@ import java.net.URL;
 public class Filters {
         public Filters(int temp)throws Exception {
             Random random=new Random();
-            int temp0=random.nextInt();
+            int om=4;
+               int temp0=random.nextInt();
             URL url = new URL("https://scontent.ftlv18-1.fna.fbcdn.net/v/t39.30808-6/211719664_104441521904401_6701039342400064148_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SUcCFTsOikYAX9gGjcM&_nc_ht=scontent.ftlv18-1.fna&oh=00_AT-6FJyjwAswQKKifB5qLl0ii3LPgHfrPALsszSGpDENOA&oe=62B76F2D");
             BufferedImage image = ImageIO.read(url);
             BufferedImage outputeImage = ImageIO.read(url);
