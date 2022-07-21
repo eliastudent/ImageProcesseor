@@ -29,7 +29,6 @@ public class Window extends JFrame{
         this.setResizable(true);
         this.setLayout(null);
         this.setTitle("POTOSHOP");
-        this.setVisible(true);
         this.robotPlay=new RobotPlay();
 
 
@@ -44,9 +43,10 @@ public class Window extends JFrame{
         search.setBounds(WINDOW_WHIDTH/2+DEFAULT_COMPONENT_HIGHET/3,DEFAULT_COMPONENT_HIGHET,WINDOW_WHIDTH/10,DEFAULT_COMPONENT_HIGHET/2);
         search.setVisible(true);
         search.addActionListener((event) -> {
-            userInput = text.getText();
+
+             userInput = text.getText();
             if (userInput.equals(nulll))
-                System.out.println("Please put the value");
+            System.err.println("Please put the value");
             else {
                 System.out.println(userInput);
 
@@ -67,6 +67,7 @@ public class Window extends JFrame{
         botton("Darker",WINDOW_HIGHET/2+DEFAULT_SPACE2+DEFAULT_SPACE/2, DEFAULT_COMPONENT_HIGHET +DEFAULT_SPACE2*4,WINDOW_WHIDTH/4,DEFAULT_COMPONENT_HIGHET/2);
         botton("Mirror",WINDOW_HIGHET/2+DEFAULT_SPACE2+DEFAULT_SPACE/2, DEFAULT_COMPONENT_HIGHET +DEFAULT_SPACE2*6,WINDOW_WHIDTH/4,DEFAULT_COMPONENT_HIGHET/2);
         botton("Contrast",WINDOW_HIGHET/2+DEFAULT_SPACE2+DEFAULT_SPACE/2, DEFAULT_COMPONENT_HIGHET+DEFAULT_SPACE2*5,WINDOW_WHIDTH/4,DEFAULT_COMPONENT_HIGHET/2);
+        this.setVisible(true);
 
     }
     public void botton(String str, int x, int y, int HIGHET, int WHIDTH ){
