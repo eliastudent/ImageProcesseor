@@ -52,7 +52,7 @@ public class Filters  {
     public static URL playUrl(){
         URL urlll;
         try {
-            urlll = new URL(Window.userInput);
+            urlll = new URL(Button.userInput);
             //  System.out.println(urlll);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
