@@ -22,7 +22,7 @@ public class RobotPlay  {
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\eeeee\\Desktop\\JAVA\\chromedriver.exe");
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get(Button.getUserInput());
+      //  driver.get(Button.getUserInput());
 
        driver.quit();
 
