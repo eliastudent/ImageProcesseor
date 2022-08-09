@@ -46,9 +46,9 @@ public class Window extends JFrame{
         search.setVisible(true);
         search.addActionListener((event) -> {
 
-             userInput = text.getText();
+            userInput = text.getText();
             if (userInput.equals(nulll))
-            System.err.println("Please put the value");
+                System.err.println("Please put the value");
             else {
                 System.out.println(userInput);
                 this.robotPlay.start(userInput);
@@ -56,8 +56,8 @@ public class Window extends JFrame{
 
         this.add(search);
         //TITLES
-       label("POTOSHOP",WINDOW_WHIDTH/2-DEFAULT_COMPONENT_HIGHET+DEFAULT_SPACE, 0, WINDOW_WHIDTH / 2, DEFAULT_COMPONENT_HIGHET);
-     label("BEFORE",DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/3, DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/2, WINDOW_HIGHET / 4, DEFAULT_SPACE);
+        label("POTOSHOP",WINDOW_WHIDTH/2-DEFAULT_COMPONENT_HIGHET+DEFAULT_SPACE, 0, WINDOW_WHIDTH / 2, DEFAULT_COMPONENT_HIGHET);
+        label("BEFORE",DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/3, DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/2, WINDOW_HIGHET / 4, DEFAULT_SPACE);
         label("AFTER",WINDOW_HIGHET+DEFAULT_COMPONENT_HIGHET*2, DEFAULT_COMPONENT_HIGHET+DEFAULT_COMPONENT_HIGHET/2, WINDOW_HIGHET / 4, DEFAULT_SPACE);
 
         //BUTTONS
@@ -72,12 +72,12 @@ public class Window extends JFrame{
     }
     public void botton(String str, int x, int y, int HIGHET, int WHIDTH ){
         JButton button=new JButton(str);
-    button.setBounds(x,y,HIGHET,WHIDTH);
-    button.setText(str);
-    button.setVisible(true);
-    button.addActionListener((event) -> {
-        String s = button.getText();
-        switch (s) {
+        button.setBounds(x,y,HIGHET,WHIDTH);
+        button.setText(str);
+        button.setVisible(true);
+        button.addActionListener((event) -> {
+            String s = button.getText();
+            switch (s) {
 
                 case "BlackAndWhite" -> {
                     try {
@@ -152,8 +152,8 @@ public class Window extends JFrame{
                 }
 
             }});
-            this.add(button);
-        }
+        this.add(button);
+    }
     public void label(String title, int x, int y, int h, int w ) {
         JLabel label = new JLabel(title);
         label.setBounds(x, y, h, w);
@@ -162,7 +162,7 @@ public class Window extends JFrame{
         label.setVisible(true);
 
     }
-protected void paintComponent(Graphics g) throws IOException, InterruptedException {
+    protected void paintComponent(Graphics g) throws IOException, InterruptedException {
         g.drawImage(original.getImage(), DEFAULT_SPACE, 200, null);
         g.drawImage(afterFilter.getImage(),670 , 200, null);
     }
@@ -192,8 +192,8 @@ protected void paintComponent(Graphics g) throws IOException, InterruptedExcepti
     }
 
     public static void wait(int a){
-            try {
-                Thread.sleep(a);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }}}
+        try {
+            Thread.sleep(a);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }}}

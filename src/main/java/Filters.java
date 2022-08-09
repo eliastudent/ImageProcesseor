@@ -18,7 +18,7 @@ public class Filters  {
         int temp0=random.nextInt();
         urlPlay=playUrl();
         BufferedImage image = ImageIO.read(urlPlay);
-         outputeImage = ImageIO.read(playUrl());
+        outputeImage = ImageIO.read(playUrl());
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
                 int pixel = image.getRGB(x, y);
