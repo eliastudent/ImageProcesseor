@@ -10,15 +10,15 @@ import java.util.Random;
 
 public class Filters  {
     public URL urlPlay;
+    static BufferedImage outputeImage;
 
     public Filters(int temp)throws Exception {
         int saveOriginal=0;
         Random random=new Random();
         int temp0=random.nextInt();
-        //URL url = new URL("https://scontent.ftlv18-1.fna.fbcdn.net/v/t39.30808-6/211719664_104441521904401_6701039342400064148_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=SUcCFTsOikYAX9gGjcM&_nc_ht=scontent.ftlv18-1.fna&oh=00_AT-6FJyjwAswQKKifB5qLl0ii3LPgHfrPALsszSGpDENOA&oe=62B76F2D");
         urlPlay=playUrl();
         BufferedImage image = ImageIO.read(urlPlay);
-        BufferedImage outputeImage = ImageIO.read(playUrl());
+         outputeImage = ImageIO.read(playUrl());
         for (int x = 0; x < image.getWidth(); x++) {
             for (int y = 0; y < image.getHeight(); y++) {
                 int pixel = image.getRGB(x, y);
@@ -52,8 +52,7 @@ public class Filters  {
     public static URL playUrl(){
         URL urlll;
         try {
-            urlll = new URL(Button.userInput);
-            //  System.out.println(urlll);
+            urlll = new URL(RobotPlay.url);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
